@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">RandomReel</string>
+
+    <!-- Genre Spinner -->
+    <string name="genre_prompt">Choose a genre</string>
+    <string-array name="genre_array">
+        <item>Action</item>
+        <item>Adventure</item>
+        <item>Anime</item>
+        <item>Comedy</item>
+        <!-- Add other genres here -->
+    </string-array>
+
+    <!-- Ratings Spinner -->
+    <string name="ratings_prompt">Select rating range</string>
+    <string-array name="ratings_array">
+        <item>Ratings 0-20</item>
+        <item>Ratings 21-40</item>
+        <item>Ratings 41-60</item>
+        <item>Ratings 61-80</item>
+        <item>Ratings 81-100</item>
+    </string-array>
+
+    <!-- Rating Category Spinner -->
+    <string name="rating_category_prompt">Select rating category</string>
+    <string-array name="rating_category_array">
+        <item>Rating G</item>
+        <item>Rating PG</item>
+        <item>Rating PG-13</item>
+        <item>Rating R</item>
+        <item>Rating NC-17</item>
+    </string-array>
+</resources>
