@@ -1,33 +1,42 @@
 <resources>
-    <string name="app_name">RandomReel</string>
+    <string name="label_movie_genre">Movie Genre</string>
+    <string name="label_view_rating">View Rating</string>
+    <string name="label_movie_rating">Movie Rating</string>
+    <string name="label_movie_length">Movie Length</string>
 
-    <!-- Genre Spinner -->
-    <string name="genre_prompt">Choose a genre</string>
-    <string-array name="genre_array">
+    <string-array name="genres_array">
         <item>Action</item>
-        <item>Adventure</item>
+        <item>Animation</item>
         <item>Anime</item>
         <item>Comedy</item>
-        <!-- Add other genres here -->
+        <item>Documentary</item>
+        <item>Drama</item>
+        <item>Family</item>
+        <item>Fantasy</item>
+        <item>Horror</item>
+        <item>Musical</item>
+        <item>Romance</item>
+        <item>Sci-Fi</item>
+        <item>Western</item>
     </string-array>
 
-    <!-- Ratings Spinner -->
-    <string name="ratings_prompt">Select rating range</string>
-    <string-array name="ratings_array">
-        <item>Ratings 0-20</item>
-        <item>Ratings 21-40</item>
-        <item>Ratings 41-60</item>
-        <item>Ratings 61-80</item>
-        <item>Ratings 81-100</item>
+    <string-array name="viewer_ratings_array">
+        <item>01–15</item>
+        <item>16–30</item>
+        <item>31–45</item>
+        <item>46–60</item>
+        <item>61–75</item>
+        <item>76–90</item>
+        <item>91–100</item>
     </string-array>
 
-    <!-- Rating Category Spinner -->
-    <string name="rating_category_prompt">Select rating category</string>
-    <string-array name="rating_category_array">
-        <item>Rating G</item>
-        <item>Rating PG</item>
-        <item>Rating PG-13</item>
-        <item>Rating R</item>
-        <item>Rating NC-17</item>
+    <string-array name="film_ratings_array">
+        <item>G</item>
+        <item>PG</item>
+        <item>PG-13</item>
+        <item>R</item>
+        <item>NC-17</item>
     </string-array>
+    <string name="app_name">RandomReel</string>
+    <string name="label_viewer_ratings">Viewer Ratings</string>
 </resources>
