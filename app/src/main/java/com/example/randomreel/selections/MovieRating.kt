@@ -1,4 +1,4 @@
-package selections
+package com.example.randomreel.selections
 
 enum class MovieRating (val code: String, val description: String) {
     G("G", "General Audiences"),

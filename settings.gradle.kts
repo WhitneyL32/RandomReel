@@ -7,7 +7,7 @@ pluginManagement {
     resolutionStrategy {
         eachPlugin {
             if (requested.id.namespace == "com.android") {
-                useVersion("7.0.4") // Correct version to match your build.gradle.kts
+                useVersion("8.4.1") // Correct version to match your build.gradle.kts
             }
         }
     }

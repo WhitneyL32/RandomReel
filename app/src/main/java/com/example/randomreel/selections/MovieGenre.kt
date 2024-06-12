@@ -1,4 +1,4 @@
-package selections
+package com.example.randomreel.selections
 
 enum class MovieGenre (val displayName: String) {
     ACTION("Action"),

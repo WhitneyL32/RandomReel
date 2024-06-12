@@ -1,4 +1,4 @@
-package selections
+package com.example.randomreel.selections
 
 enum class ViewerRatings (val description: String, val minRating: Int, val maxRating: Int) {
     RANGE_01_15("01-15", 1, 15),
