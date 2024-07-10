@@ -39,4 +39,15 @@
     </string-array>
     <string name="app_name">RandomReel</string>
     <string name="label_viewer_ratings">Viewer Ratings</string>
+    <string name="randomreel">RandomReel</string>
+    <string name="create_account">Create Account</string>
+    <string name="search">Search</string>
+    <string name="login">Login</string>
+    <string name="enter_username">Enter username</string>
+    <string name="enter_password">Enter password</string>
+    <string name="create_account1">Create Account</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="enter_name">Enter Name</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="popcorn_image">popcorn</string>
 </resources>
