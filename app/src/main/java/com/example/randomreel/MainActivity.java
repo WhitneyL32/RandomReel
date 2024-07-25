@@ -1,5 +1,6 @@
 package com.example.randomreel;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ArrayAdapter;
@@ -7,11 +8,9 @@ import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.Spinner;
 import android.widget.TextView;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.example.randomreel.api.ApiClient;
 import com.example.randomreel.api.MovieApiService;
 import com.example.randomreel.model.MovieResponse;
@@ -19,9 +18,8 @@ import com.example.randomreel.model.Movie;
 import com.example.randomreel.selections.MovieGenre;
 import com.example.randomreel.selections.MovieRating;
 import com.example.randomreel.selections.ViewerRatings;
-
+import java.util.ArrayList;
 import java.util.List;
-
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -104,9 +102,23 @@ public class MainActivity extends AppCompatActivity {
             public void onResponse(Call<MovieResponse> call, Response<MovieResponse> response) {
                 if (response.isSuccessful() && response.body() != null) {
                     List<Movie> movies = response.body().getResults();
-                    // Update RecyclerView with movie results
-                    movieAdapter = new MovieAdapter(movies);
-                    recyclerViewMovies.setAdapter(movieAdapter);
+
+                    // Convert movie details to lists of strings
+                    ArrayList<String> movieTitles = new ArrayList<>();
+                    ArrayList<String> movieOverviews = new ArrayList<>();
+                    ArrayList<Double> movieRatings = new ArrayList<>();
+                    for (Movie movie : movies) {
+                        movieTitles.add(movie.getTitle());
+                        movieOverviews.add(movie.getOverview());
+                        movieRatings.add(movie.getVoteAverage());
+                    }
+
+                    // Pass the movie details to ResultActivity
+                    Intent intent = new Intent(MainActivity.this, ResultActivity.class);
+                    intent.putStringArrayListExtra("movie_titles", movieTitles);
+                    intent.putStringArrayListExtra("movie_overviews", movieOverviews);
+                    intent.putExtra("movie_ratings", movieRatings);
+                    startActivity(intent);
                 } else {
                     Log.e("API Error", "Response code: " + response.code());
                 }

@@ -33,6 +33,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!-- Add the new ResultActivity here -->
+        <activity
+            android:name=".ResultActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
