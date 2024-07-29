@@ -42,11 +42,8 @@ public class MainActivity extends AppCompatActivity {
         adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner1.setAdapter(adapter1);
 
-        Spinner spinner2 = findViewById(R.id.spinner2);
-        ArrayAdapter<ViewerRatings> adapter2 = new ArrayAdapter<>(this,
-                android.R.layout.simple_spinner_item, ViewerRatings.values());
-        adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner2.setAdapter(adapter2);
+        TextView viewerRatingTextView = findViewById(R.id.viewerRatingTextView);
+        viewerRatingTextView.setText(ViewerRatings.RANGE_01_10.getDescription());
 
         Spinner spinner3 = findViewById(R.id.spinner3);
         ArrayAdapter<MovieRating> adapter3 = new ArrayAdapter<>(this,
@@ -83,13 +80,14 @@ public class MainActivity extends AppCompatActivity {
         Button searchButton = findViewById(R.id.searchButton);
         searchButton.setOnClickListener(view -> {
             int selectedGenreId = ((MovieGenre) spinner1.getSelectedItem()).getId();
-            float minViewerRating = ((ViewerRatings) spinner2.getSelectedItem()).getMinRating();
-            float maxViewerRating = ((ViewerRatings) spinner2.getSelectedItem()).getMaxRating();
+            float minViewerRating = 1; // Fixed minimum viewer rating
+            float maxViewerRating = 10; // Fixed maximum viewer rating
             String certification = ((MovieRating) spinner3.getSelectedItem()).getCode();
             int movieLength = seekBarMovieLength.getProgress() + 1;
 
             fetchMovies(selectedGenreId, minViewerRating, maxViewerRating, certification, movieLength);
         });
+
     }
 
     private void fetchMovies(int genreId, float minRating, float maxRating, String certification, int runtime) {

@@ -50,4 +50,6 @@
     <string name="enter_name">Enter Name</string>
     <string name="enter_email">Enter Email</string>
     <string name="popcorn_image">popcorn</string>
+    <string name="search_again">Search Again</string>
+    <string name="_1_10">1-10</string>
 </resources>
